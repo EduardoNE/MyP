@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+  <ion-title>{{title}}</ion-title>
+</ion-navbar>
+
+<ion-content class="categoria">
+	<ion-card *ngFor="#item of items" class="advanced-background" (click)="href($event,item.id)">
+	  <img src="{{internet ? item.imagem : 'img/avatar-receita.jpg'}}"/>
+	  <p class="advanced-background-title" [innerHTML]="item.nome"></p>
+	  <p class="advanced-background-subtitle">{{item.tempo}} minutos</p>
+	  <p class="advanced-background-subsubtitle">{{item.like}} Fizeram essa receita</p>
+	</ion-card>
+	<button class="button button-block button-positive" (click)="carregaMais()" *ngIf="loadMore">
+		carregar mais
+	</button>
+</ion-content>

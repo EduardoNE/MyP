@@ -1,0 +1,12 @@
+<ion-navbar *navbar>
+  <ion-title>Resultados</ion-title>
+</ion-navbar>
+
+<ion-content class="resultado">
+	<ion-card *ngFor="#item of receitas" class="advanced-background" (click)="href($event,item.id)">
+	  <img src="{{item.imagem}}"/>
+	  <p class="advanced-background-title" style="background-color: rgba(0, 0, 0, 0.3);" [innerHTML]="item.nome"></p>
+	  <p class="advanced-background-subtitle" style="background-color: rgba(0, 0, 0, 0.1);" >{{item.falta}} itens faltantes</p>
+	  <p class="advanced-background-subsubtitle" style="background-color: rgba(0, 0, 0, 0.1);" >{{item.tempo}} minutos</p>
+	</ion-card>
+</ion-content>

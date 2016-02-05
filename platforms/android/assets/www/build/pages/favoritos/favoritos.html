@@ -1,0 +1,18 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Favoritos
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="favoritos">
+<ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)" hideCancelButton="false" (cancel)="getData()" cancelButtonText="Atualizar"></ion-searchbar>
+
+<ion-card *ngFor="#item of items" class="advanced-background" (click)="href($event,item.id)">
+  <img src="http://bastidor.com.br/airfry/img/prato/{{item.imagem}}"/>
+  <p class="advanced-background-title" style="background-color: rgba(0, 0, 0, 0.3);">{{item.nome}}</p>
+  <p class="advanced-background-subtitle" style="background-color: rgba(0, 0, 0, 0.1);">{{item.tempo}} minutos</p>
+</ion-card>
+
+</ion-content>
+

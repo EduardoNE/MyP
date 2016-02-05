@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "br.com.chefairfryer"
+        }
+    },
+    "dependent_plugins": {}
+}

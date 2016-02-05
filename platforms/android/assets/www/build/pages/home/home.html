@@ -1,0 +1,79 @@
+<ion-navbar *navbar>
+  <ion-title>Categorias</ion-title>
+</ion-navbar>
+
+<ion-content padding class="home">
+  <ion-list inset>
+  <button ion-item (click)="goUpdate()" *ngIf="updateAvaliable">
+    <div class="" item-left>
+      Atualização Disponivel!
+    </div>
+  </button>
+  <button ion-item (click)="href($event,3,'ABC')">
+    <div class="" item-left>
+      ABC
+    </div>
+  </button>
+  <button ion-item (click)="href($event,7,'Acompanhamentos')">
+    <div class="" item-left>
+      Acompanhamentos
+    </div>
+  </button>
+  <button ion-item (click)="href($event,5,'Salgados e Petiscos')">
+    <div class="" item-left>
+      Salgados e Petiscos
+    </div>
+  </button>
+  <button ion-item (click)="href($event,1,'Carnes')">
+    <div class="" item-left>
+      Carnes
+    </div>
+  </button>
+  <button ion-item (click)="href($event,4,'Doces e Sobremesas')">
+    <div class="" item-left>
+      Doces e Sobremesas
+    </div>
+  </button>
+  <button ion-item (click)="href($event,9,'Fitness')">
+    <div class="" item-left>
+      Fitness
+    </div>
+  </button>
+  <button ion-item (click)="href($event,6,'Industrializados')">
+    <div class="" item-left>
+      Industrializados
+    </div>
+  </button>
+  <button ion-item (click)="href($event,8,'Pães, Bolos e Muffins')">
+    <div class="" item-left>
+      Pães, Bolos e Muffins
+    </div>
+  </button>
+  <button ion-item (click)="href($event,2,'Peixes e Frutos do Mar')">
+    <div class="" item-left>
+      Peixes e Frutos do Mar
+    </div>
+  </button>
+  <button ion-item (click)="href($event,10,'Kids')">
+    <div class="" item-left>
+      Kids
+    </div>
+  </button>
+  <button ion-item (click)="href($event,11,'Dicas')">
+    <div class="" item-left>
+      Dicas
+    </div>
+  </button>
+  <button ion-item (click)="href($event,12,'Descubra')">
+    <div class="" item-left>
+      Descubra
+    </div>
+  </button>
+  <button ion-item (click)="href($event,13,'Amigos do Chef')">
+    <div class="" item-left>
+      Amigos do Chef
+    </div>
+  </button>
+</ion-list>
+  
+</ion-content>

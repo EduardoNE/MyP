@@ -1,0 +1,18 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Geladeira
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="geladeira">
+<button class="button button-block button-positive" (click)="pesquisar($event)">
+	pronto!
+</button>
+<ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+
+	<ion-checkbox dark [(ngModel)]="item.checked" *ngFor="#item of items">
+  		{{ item.nome }}
+	</ion-checkbox>
+
+</ion-content>

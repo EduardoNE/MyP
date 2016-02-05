@@ -1,0 +1,56 @@
+<ion-navbar *navbar>
+  <ion-title>receita</ion-title>
+</ion-navbar>
+
+<ion-content padding class="receita">
+  <div class="item-receita">
+
+      <div class="img"><img src="{{internet ? receita.imagem : 'img/avatar-receita.jpg'}}"></div>
+
+      <div class="padding nome-receita">
+        <h1 [innerHTML]="receita.nome"></h1>
+      </div>
+
+      <div class="item item-divider item-icon-right">
+        Ingredientes <i class="icon ion-ios7-compose-outline"></i>
+      </div>
+
+      <div class="titulo-desc padding">
+        <p [innerHTML]="receita.quantidades">
+        </p>
+      </div>
+
+      <div class="item item-divider item-icon-right">
+        Como fazer <i class="icon ion-ios7-chatbubble-outline"></i>
+      </div>
+
+      <div class="titulo-desc padding">
+        <p [innerHTML]="receita.receita"></p>
+      </div>
+
+
+      <div class="infos">
+        <div class="row">
+          <div class="col col-33 icon ion-clock"> {{receita.tempo}}min</div>
+          <div class="col col-33 icon ion-flame"> {{receita.temperatura}}º</div>
+          <div class="col col-33 icon ion-person"> {{receita.serve}}</div>
+        </div>
+      </div>
+
+      <div class="bts">
+        <div class="button-bar">
+          <button (click)="facebook();" class="button button-positive ion-social-facebook">Face</button>
+          <button (click)="email();" class="button button-royal ion-email">E-mail</button>
+          <button (click)="whatsapp();" class="button button-balanced icon-whatsapp"><img src="img/whatsapp.svg" /></button>
+
+          <button (click)="euFiz()" class="button button-assertive {{feito}}" *ngIf="!feito"> eu fiz! </button>
+          <button class="button button-assertive {{feito}}" *ngIf="feito"> ja fiz </button>
+
+          <button (click)="favoritar()" class="button button-energized ion-ios7-star" *ngIf="!favoritado">favoritar</button>
+          <button (click)="favoritar()" class="button button-energized ion-ios7-star" *ngIf="favoritado" >desfavoritar</button>
+        </div>
+      </div>
+
+    </div>
+
+</ion-content>
